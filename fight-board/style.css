@@ -1,17 +1,17 @@
 @font-face {
     font-family: "MppMain";
-    src: url("assets/font/Segoe UI.ttf");
+    src: url("/minecraft-map-ui/assets/font/Segoe UI.ttf");
 }
 
 @font-face {
     font-family: "MppMainBold";
-    src: url("assets/font/Segoe UI Bold.ttf");
+    src: url("/minecraft-map-ui/assets/font/Segoe UI Bold.ttf");
 }
 
 
 body {
     margin: 0;
-    background-image: url("assets/images/bg1.png");
+    background-image: url("/minecraft-map-ui/assets/images/bg1.png");
     width: 100%;
     height: 100vh;
     text-align: center;
