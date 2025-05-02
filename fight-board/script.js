@@ -1,7 +1,5 @@
 function send2Redis(msg) {
-    console.log(`[REDIS]: ${msg}`);
-
-    window.sendToRedis(msg);
+    console.log(`event:${msg}`);
 }
 
 function jumpFight(id) {
