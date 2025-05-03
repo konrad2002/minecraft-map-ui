@@ -86,7 +86,7 @@ jobs:
         env:
           cache-name: cache-dist
         with:
-          path: dist/browser/
+          path: dist/minecraft-map-ui/browser/
           key: ${{ runner.os }}-${{ github.run_id }}
 
   publish:
@@ -132,7 +132,7 @@ jobs:
         env:
           cache-name: cache-dist
         with:
-          path: dist/browser/
+          path: dist/minecraft-map-ui/browser/
           key: ${{ runner.os }}-${{ github.run_id }}
 
       # Build and push Docker image with Buildx (don't push on PR)
@@ -166,14 +166,14 @@ jobs:
         env:
           cache-name: cache-dist
         with:
-          path: dist/browser/
+          path: dist/minecraft-map-ui/browser/
           key: ${{ runner.os }}-${{ github.run_id }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './dist/browser/'
+          path: './dist/minecraft-map-ui/browser/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
