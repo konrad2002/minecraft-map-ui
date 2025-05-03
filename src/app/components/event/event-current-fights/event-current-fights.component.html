@@ -3,6 +3,6 @@
   @for (fight of fights; track fight.id) {
     <app-event-fight [fight]="fight"></app-event-fight>
   } @empty {
-    <i>Keine Kämpfe</i>
+    <i class="no-fights">Keine Kämpfe</i>
   }
 </div>

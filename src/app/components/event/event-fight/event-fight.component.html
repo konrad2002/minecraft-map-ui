@@ -1,11 +1,11 @@
 
 <div class="fight-box" (click)="playerJoin()">
-  <div class="fight-header">
-    {{EventFightState.getString(fight.state)}}
-  </div>
   <div class="fight-content">
     <span class="team1">{{fight.match?.team1?.name}}</span>
     <span class="vs">vs</span>
     <span class="team2">{{fight.match?.team2?.name}}</span>
+  </div>
+  <div class="fight-header">
+    {{EventFightState.getString(fight.state)}}
   </div>
 </div>

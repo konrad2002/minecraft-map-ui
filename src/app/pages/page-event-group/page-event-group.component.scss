@@ -1,15 +1,12 @@
 .fights {
   position: fixed;
-  width: 100%;
+  width: calc(100% - 16px);
   padding: 8px;
   border-top: 1px solid var(--color-lines);
   display: block;
   bottom: 0;
 }
 
-app-event-current-fights {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 50% 50%;
-  grid-gap: 8px;
+.logo {
+  width: 180px;
 }
