@@ -89,6 +89,13 @@ jobs:
           path: ./dist/minecraft-map-ui/browser/
           key: ${{ runner.os }}-${{ github.run_id }}
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          name: 'github-pages'
+          path: './dist/minecraft-map-ui/browser/'
+
   publish:
     runs-on: ubuntu-latest
     needs: build
@@ -169,12 +176,6 @@ jobs:
           path: ./dist/minecraft-map-ui/browser/
           key: ${{ runner.os }}-${{ github.run_id }}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          name: 'github-pages'
-          path: './dist/minecraft-map-ui/browser/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
