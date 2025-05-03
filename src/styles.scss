@@ -18,6 +18,12 @@
   src: url("../assets/font/DepartureMono-Regular.otf");
 }
 
+:root {
+  --color-lines: #334;
+  --color-main: #fff;
+  --color-second: #ccc;
+}
+
 
 body {
   margin: 0;
@@ -26,7 +32,24 @@ body {
   text-align: center;
   font-family: MppDeparture, serif;
   background: linear-gradient(to bottom right, #141a39, #131313);
-  #background-color: #131313;
+  // background-color: #131313;
   color: white;
   overflow: hidden;
 }
+
+.team1 {
+  color: #34d9eb;
+}
+
+.team2 {
+  color: #eb4634;
+}
+
+hr {
+  border-color: var(--color-lines);
+}
+
+h3 {
+  margin: 8px 0;
+}
+

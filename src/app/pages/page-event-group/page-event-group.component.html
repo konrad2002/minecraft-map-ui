@@ -1,4 +1,9 @@
 <h1>WarGear-Liga 2025</h1>
 <h2>Spieltag 1 - Gruppenphase</h2>
-<hr>
-<app-event-current-fights></app-event-current-fights>
+
+@if (event) {
+  <div class="fights">
+    <h3>Aktuelle Kämpfe</h3>
+    <app-event-current-fights [event]="event"></app-event-current-fights>
+  </div>
+}

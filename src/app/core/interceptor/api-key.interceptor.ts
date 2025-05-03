@@ -3,7 +3,7 @@ import { HttpInterceptorFn } from '@angular/common/http';
 export const apiKeyInterceptor: HttpInterceptorFn = (request, next) => {
   if (request.url.includes("myplayplanet.services") || request.url.includes("localhost") || request.url.includes("api.myplayplanet.dev") || request.url.includes("api.myplayplanet.services")) {
     const modifiedReq = request.clone({
-      headers: request.headers.set('apikey', 'blub'),
+      headers: request.headers.set('apikey', 'X5MqLmear2c6wvn8'),
     });
 
     console.log("accessing " + request.url + " with token");

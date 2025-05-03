@@ -1,3 +1,8 @@
-@if (event) {
 
-}
+<div class="fight-list">
+  @for (fight of fights; track fight.id) {
+    <app-event-fight [fight]="fight"></app-event-fight>
+  } @empty {
+    <i>Keine Kämpfe</i>
+  }
+</div>

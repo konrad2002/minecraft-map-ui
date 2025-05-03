@@ -13,7 +13,7 @@ import {EventModel} from "../../core/models/event/event.model";
   standalone: true
 })
 export class PageEventGroupComponent implements OnInit {
-  event: EventModel = {} as EventModel;
+  event?: EventModel;
 
   constructor(
     private eventService: EventService

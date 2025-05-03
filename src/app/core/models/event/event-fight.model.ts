@@ -1,10 +1,15 @@
 import {EventTeam} from "./event-team.model";
+import {EventMatch} from "./event-match.model";
 
 export interface EventFight {
   id: number;
+  serverName: string;
   startDate: Date;
   state: EventFightState;
   winner?: EventTeam;
+  match?: EventMatch;
+  pointsTeam1: number;
+  pointsTeam2: number;
 }
 
 export enum EventFightState {
@@ -42,5 +47,24 @@ export namespace EventFightState {
 
   export function getKey(state: EventFightState): string {
     return `global.event.fight.state.${state.toLowerCase()}`;
+  }
+
+  export function getString(state: EventFightState): string {
+    switch (state) {
+      case EventFightState.CREATED:
+        return "Erstellt";
+      case EventFightState.STARTING:
+        return "Startet"
+      case EventFightState.PREPARING:
+        return "Vorbereitung";
+      case EventFightState.RUNNING:
+        return "Läuft";
+      case EventFightState.PENDING:
+        return "Pending";
+      case EventFightState.OVER:
+        return "Beendet";
+      default:
+        return "-";
+    }
   }
 }

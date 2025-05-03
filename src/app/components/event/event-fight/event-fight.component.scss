@@ -1,0 +1,29 @@
+.fight-box {
+  background-color: #0003;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #334;
+}
+
+.fight-header {
+  color: var(--color-second);
+  font-size: 14px;
+}
+
+.team1 {
+  display: inline-block;
+  width: 40%;
+  text-align: left;
+}
+
+.team2 {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+}
+
+.vs {
+  display: inline-block;
+  width: 20%;
+}
