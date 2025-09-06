@@ -1,0 +1,8 @@
+
+<div class="match-list">
+  @for (match of matches; track match.id) {
+    <app-event-match [match]="match"></app-event-match>
+  } @empty {
+    <i class="no-matches">Keine Kämpfe</i>
+  }
+</div>

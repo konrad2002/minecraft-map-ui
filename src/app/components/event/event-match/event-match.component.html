@@ -1,0 +1,22 @@
+
+<div class="match-box">
+  <div class="match-content">
+    <span class="team1">{{match.team1?.name}}</span>
+    <span class="vs">vs</span>
+    <span class="team2">{{match.team2?.name}}</span>
+  </div>
+  @for (fight of match.fights; track fight.id) {
+    <div class="fight-box" (click)="playerJoin(fight)">
+      <div class="match-content">
+        <span class="team1">{{ fight.winner?.shortName === match.team1?.shortName ? "♛" : "" }}</span>
+        <span class="vs">
+          Kampf {{fight.startDate | date: 'HH:mm'}}
+        </span>
+        <span class="team2">{{ fight.winner?.shortName === match.team2?.shortName ? "♛" : "" }}</span>
+      </div>
+      <div class="fight-header">
+        {{EventFightState.getString(fight.state)}}
+      </div>
+    </div>
+  }
+</div>

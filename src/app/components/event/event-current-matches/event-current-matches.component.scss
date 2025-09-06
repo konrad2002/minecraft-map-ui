@@ -1,0 +1,10 @@
+.match-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+  grid-gap: 8px;
+}
+
+.no-matches {
+  grid-column: span 2;
+}
