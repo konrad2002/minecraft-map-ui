@@ -19,6 +19,6 @@ export class EventFightService extends BaseService {
 
   getCurrentFights(eventId: number): Observable<EventFight[]> {
     const states = [EventFightState.STARTING, EventFightState.PREPARING, EventFightState.RUNNING]
-    return this.apiService.get(this.API_URL, `${eventId}/state/${states.join(',')}`);
+    return this.apiService.get(this.API_URL, `${eventId}/state/${states.join(',')}/display`);
   }
 }
